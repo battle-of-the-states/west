@@ -635,6 +635,7 @@ def send_tweet(message, num, total):
 
 
 ########## Scheduler ###########
+set_standings()
 print(time.ctime())
 
 

@@ -13,9 +13,11 @@ spec:
       labels:
         app: west
     spec:
+      imagePullSecrets:
+      - name: pipeline-docker-registry
       containers:
       - name: west
-        image: registry:5000/botsffl:west
+        image: ${CICD_IMAGE}:${CICD_EXECUTION_SEQUENCE}
         imagePullPolicy: Always
         env:
         - name: WEST
