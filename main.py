@@ -464,6 +464,7 @@ def set_roster_data():
             client.hset(roster["owner_id"], 'fpts', value["fpts"])
             client.hset(roster["owner_id"], 'wins', value["wins"])
             client.hset(roster["owner_id"], 'losses', value["losses"])
+            print(value)
 
 
 def clear_vars():
